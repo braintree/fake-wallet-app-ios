@@ -73,7 +73,7 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
         switch (indexPath.row) {
             case WTLManualAuthTableViewControllerActionSucceedRowIndex: {
                 NSLog(@"WLT Will Succeed");
-                NSString *successTemplate = @"scheme://success?payload=eyJhY2NvdW50X2NvdW50cnkiOiJVUyIsInJlc3BvbnNlX3R5cGUiOiJjb2RlIiwiZXhwaXJlc19pbiI6LTEsImRpc3BsYXlfbmFtZSI6IkJyZW50IEZpdHpnZXJhbGQiLCJzY29wZSI6Imh0dHBzOlwvXC91cmkucGF5cGFsLmNvbVwvc2VydmljZXNcL3BheW1lbnRzXC9mdXR1cmVwYXltZW50cyIsImVtYWlsIjoiYnVybnRvQGdtYWlsLmNvbSIsImF1dGhvcml6YXRpb25fY29kZSI6IkVPZksxWGV2ZTFyclpseDBSbG1xNXl0MVlLdGxKYVEweE84czFIbklTLXc1SVA3NWdPNTVkR3cwR2UzN1pPVnFOWUFCdHZhbDFtMklzQ0RaOUQ0aE1VSUxhX0tUOTRpVFU3WlJrNkVRU2puUmlSNXAtbW9ZODZRcURmTHRTa1ZrMnciLCJ2ZXJzaW9uIjoxLCJsYW5ndWFnZSI6ImVuIiwiYWNjZXNzX3Rva2VuIjoiIn0%3D&x-source=com.yourcompany.PPClient";
+                NSString *successTemplate = @"scheme://success?payload=eyJhY2NvdW50X2NvdW50cnkiOiJVUyIsInJlc3BvbnNlX3R5cGUiOiJjb2RlIiwiZW52aXJvbm1lbnQiOiJtb2NrIiwiZXhwaXJlc19pbiI6LTEsImRpc3BsYXlfbmFtZSI6Im1vY2tEaXNwbGF5TmFtZSIsInNjb3BlIjoiaHR0cHM6XC9cL3VyaS5wYXlwYWwuY29tXC9zZXJ2aWNlc1wvcGF5bWVudHNcL2Z1dHVyZXBheW1lbnRzIiwiZW1haWwiOiJtb2NrZW1haWxhZGRyZXNzQG1vY2suY29tIiwiYXV0aG9yaXphdGlvbl9jb2RlIjoibW9ja1RoaXJkUGFydHlBdXRob3JpemF0aW9uQ29kZSIsInZlcnNpb24iOjEsImxhbmd1YWdlIjoiZW5fVVMiLCJhY2Nlc3NfdG9rZW4iOiIifQ%3D%3D&x-source=com.yourcompany.PPClient";
                 NSURLComponents *components = [NSURLComponents componentsWithString:successTemplate];
                 components.scheme = self.authRequest.callbackScheme;
                 returnSwitchURL = components.URL;
