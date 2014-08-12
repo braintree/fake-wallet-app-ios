@@ -86,7 +86,7 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
             }
             case WTLManualAuthTableViewControllerActionCancelRowIndex: {
                 NSLog(@"WLT Will Cancel");
-                NSString *cancelTemplate = @"scheme://cancel";
+                NSString *cancelTemplate = @"scheme://cancel?payload=eyJlbnZpcm9ubWVudCI6IkxpdmUifQ%3D%3D&x-source=com.paypal.PPClient.Debug";
                 NSURLComponents *components = [NSURLComponents componentsWithString:cancelTemplate];
                 components.scheme = self.authRequest.callbackScheme;
                 returnSwitchURL = components.URL;
