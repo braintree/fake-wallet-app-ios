@@ -29,6 +29,12 @@
         self.successURL = [NSURL URLWithString:[url uq_queryDictionary][@"x-success"]];
         self.cancelURL = [NSURL URLWithString:[url uq_queryDictionary][@"x-cancel"]];
         self.errorURL = [NSURL URLWithString:[url uq_queryDictionary][@"x-error"]];
+
+        if ([url.scheme isEqualToString:@"com.venmo.touch.v1"]) {
+            self.walletProvider = WLTAppSwitchWalletProviderVenmo;
+        } else if ([url.scheme isEqualToString:@"com.paypal.ppclient.touch.v1"]) {
+            self.walletProvider = WLTAppSwitchWalletProviderPayPal;
+        }
     }
     return self;
 }

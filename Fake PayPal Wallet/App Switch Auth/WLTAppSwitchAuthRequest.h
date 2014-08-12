@@ -1,5 +1,11 @@
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, WLTAppSwitchWalletProvider) {
+    WLTAppSwitchWalletProviderUnknown = 0,
+    WLTAppSwitchWalletProviderVenmo,
+    WLTAppSwitchWalletProviderPayPal,
+};
+
 @interface WLTAppSwitchAuthRequest : NSObject
 
 + (WLTAppSwitchAuthRequest *)authRequestWithURL:(NSURL *)url sourceApplication:(NSString *)sourceApp;
@@ -25,5 +31,7 @@
 - (NSURL *)errorURLWithCode:(NSInteger)code message:(NSString *)message;
 
 @property (nonatomic, strong, readonly) NSString *callbackScheme;
+
+@property (nonatomic, assign) WLTAppSwitchWalletProvider walletProvider;
 
 @end

@@ -50,17 +50,29 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
 {
     NSLog(@"Set Auth Request");
     _authRequest = authRequest;
-    if (authRequest) {
-        self.statusLabel.text = @"Handling Auth Request";
-        self.originatingAppLabel.text = [NSString stringWithFormat:@"%@ (%@)", authRequest.sourceApplicationName, authRequest.sourceApplication];
-        self.successURLLabel.text = [[authRequest successURLWithPayload:@{ @"auth_code": @"success-1234" }] absoluteString] ?: @"(nil)";
-        self.errorURLLabel.text = [[authRequest errorURLWithCode:-1 message:@"Triggered manual error"] absoluteString] ?: @"(nil)";
-        self.cancelURLLabel.text = [[authRequest cancelURL] absoluteString] ?: @"(nil)";
-    } else {
-        self.statusLabel.text = @"Unknown";
-        self.successURLLabel.text = nil;
-        self.errorURLLabel.text = nil;
-        self.cancelURLLabel.text = nil;
+    switch (authRequest.walletProvider) {
+        case WLTAppSwitchWalletProviderVenmo: {
+            self.statusLabel.text = @"Venmo Touch";
+            self.originatingAppLabel.text = [NSString stringWithFormat:@"%@ (%@)", authRequest.sourceApplicationName, authRequest.sourceApplication];
+            self.successURLLabel.text = [[authRequest successURLWithPayload:@{ @"paymentMethodNonce": @"venmo-nonce" }] absoluteString] ?: @"(nil)";
+            self.errorURLLabel.text = [[authRequest errorURLWithCode:-1 message:@"Triggered manual error"] absoluteString] ?: @"(nil)";
+            self.cancelURLLabel.text = [[authRequest cancelURL] absoluteString] ?: @"(nil)";
+            break;
+        }
+        case WLTAppSwitchWalletProviderPayPal: {
+            self.statusLabel.text = @"PayPal Touch";
+            self.originatingAppLabel.text = [NSString stringWithFormat:@"%@ (%@)", authRequest.sourceApplicationName, authRequest.sourceApplication];
+            self.successURLLabel.text = [[authRequest successURLWithPayload:@{ @"auth_code": @"paypal-auth-code" }] absoluteString] ?: @"(nil)";
+            self.errorURLLabel.text = [[authRequest errorURLWithCode:-1 message:@"Triggered manual error"] absoluteString] ?: @"(nil)";
+            self.cancelURLLabel.text = [[authRequest cancelURL] absoluteString] ?: @"(nil)";
+            break;
+        }
+        default: {
+            self.statusLabel.text = @"Unknown";
+            self.successURLLabel.text = nil;
+            self.errorURLLabel.text = nil;
+            self.cancelURLLabel.text = nil;
+        }
     }
 }
 
@@ -68,15 +80,27 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
 {
     if (indexPath.section == WTLManualAuthTableViewControllerActionsSectionIndex) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+        
         NSURL *returnSwitchURL;
         switch (indexPath.row) {
             case WTLManualAuthTableViewControllerActionSucceedRowIndex: {
                 NSLog(@"WLT Will Succeed");
-                NSString *successTemplate = @"scheme://success?payload=eyJhY2NvdW50X2NvdW50cnkiOiJVUyIsInJlc3BvbnNlX3R5cGUiOiJjb2RlIiwiZW52aXJvbm1lbnQiOiJtb2NrIiwiZXhwaXJlc19pbiI6LTEsImRpc3BsYXlfbmFtZSI6Im1vY2tEaXNwbGF5TmFtZSIsInNjb3BlIjoiaHR0cHM6XC9cL3VyaS5wYXlwYWwuY29tXC9zZXJ2aWNlc1wvcGF5bWVudHNcL2Z1dHVyZXBheW1lbnRzIiwiZW1haWwiOiJtb2NrZW1haWxhZGRyZXNzQG1vY2suY29tIiwiYXV0aG9yaXphdGlvbl9jb2RlIjoibW9ja1RoaXJkUGFydHlBdXRob3JpemF0aW9uQ29kZSIsInZlcnNpb24iOjEsImxhbmd1YWdlIjoiZW5fVVMiLCJhY2Nlc3NfdG9rZW4iOiIifQ%3D%3D&x-source=com.yourcompany.PPClient";
-                NSURLComponents *components = [NSURLComponents componentsWithString:successTemplate];
-                components.scheme = self.authRequest.callbackScheme;
-                returnSwitchURL = components.URL;
+                
+                switch (self.authRequest.walletProvider) {
+                    case WLTAppSwitchWalletProviderVenmo: {
+                        returnSwitchURL = [self.authRequest successURLWithPayload:@{ @"paymentMethodNonce": @"venmo-nonce" }];
+                        break;
+                    }
+                    case WLTAppSwitchWalletProviderPayPal: {
+                        NSString *successTemplate = @"scheme://success?payload=eyJhY2NvdW50X2NvdW50cnkiOiJVUyIsInJlc3BvbnNlX3R5cGUiOiJjb2RlIiwiZW52aXJvbm1lbnQiOiJtb2NrIiwiZXhwaXJlc19pbiI6LTEsImRpc3BsYXlfbmFtZSI6Im1vY2tEaXNwbGF5TmFtZSIsInNjb3BlIjoiaHR0cHM6XC9cL3VyaS5wYXlwYWwuY29tXC9zZXJ2aWNlc1wvcGF5bWVudHNcL2Z1dHVyZXBheW1lbnRzIiwiZW1haWwiOiJtb2NrZW1haWxhZGRyZXNzQG1vY2suY29tIiwiYXV0aG9yaXphdGlvbl9jb2RlIjoibW9ja1RoaXJkUGFydHlBdXRob3JpemF0aW9uQ29kZSIsInZlcnNpb24iOjEsImxhbmd1YWdlIjoiZW5fVVMiLCJhY2Nlc3NfdG9rZW4iOiIifQ%3D%3D&x-source=com.yourcompany.PPClient";
+                        NSURLComponents *components = [NSURLComponents componentsWithString:successTemplate];
+                        components.scheme = self.authRequest.callbackScheme;
+                        returnSwitchURL = components.URL;
+                        break;
+                    }
+                    default:
+                        break;
+                }
                 break;
             }
             case WTLManualAuthTableViewControllerActionErrorRowIndex: {
@@ -86,10 +110,21 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
             }
             case WTLManualAuthTableViewControllerActionCancelRowIndex: {
                 NSLog(@"WLT Will Cancel");
-                NSString *cancelTemplate = @"scheme://cancel?payload=eyJlbnZpcm9ubWVudCI6IkxpdmUifQ%3D%3D&x-source=com.paypal.PPClient.Debug";
-                NSURLComponents *components = [NSURLComponents componentsWithString:cancelTemplate];
-                components.scheme = self.authRequest.callbackScheme;
-                returnSwitchURL = components.URL;
+                switch (self.authRequest.walletProvider) {
+                    case WLTAppSwitchWalletProviderPayPal: {
+                        NSString *cancelTemplate = @"scheme://cancel?payload=eyJlbnZpcm9ubWVudCI6IkxpdmUifQ%3D%3D&x-source=com.paypal.PPClient.Debug";
+                        NSURLComponents *components = [NSURLComponents componentsWithString:cancelTemplate];
+                        components.scheme = self.authRequest.callbackScheme;
+                        returnSwitchURL = components.URL;
+                        break;
+                    }
+                    case WLTAppSwitchWalletProviderVenmo: {
+                        returnSwitchURL = self.authRequest.cancelURL;
+                        break;
+                    }
+                    default:
+                        break;
+                }
                 break;
             }
             default:

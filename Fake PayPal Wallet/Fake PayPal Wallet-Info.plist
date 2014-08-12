@@ -32,6 +32,16 @@
 				<string>com.paypal.ppclient.touch.v1</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
+			<key>CFBundleURLName</key>
+			<string>com.venmo.touch.v1</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.venmo.touch.v1</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
