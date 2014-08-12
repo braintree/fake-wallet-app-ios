@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00A373B49B474639BC4F8575 /* libPods-Fake PayPal Wallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C5F970D4964E29B4415FD3 /* libPods-Fake PayPal Wallet.a */; };
 		16FA9C0A199413CA0000A7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FA9C09199413CA0000A7F8 /* Foundation.framework */; };
 		16FA9C0C199413CA0000A7F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FA9C0B199413CA0000A7F8 /* CoreGraphics.framework */; };
 		16FA9C0E199413CA0000A7F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FA9C0D199413CA0000A7F8 /* UIKit.framework */; };
@@ -24,7 +23,9 @@
 		16FA9C55199414680000A7F8 /* WLTManualAuthTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9C4F199414680000A7F8 /* WLTManualAuthTableViewController.m */; };
 		16FA9C56199414680000A7F8 /* WLTAppSwitchAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9C52199414680000A7F8 /* WLTAppSwitchAuthRequest.m */; };
 		16FA9C57199414680000A7F8 /* WLTAppSwitchAuthRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9C54199414680000A7F8 /* WLTAppSwitchAuthRequestManager.m */; };
+		297D2725745E40BEB7556A7C /* libPods-fake-wallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9918529E26EC4246B00DA813 /* libPods-fake-wallet.a */; };
 		BAC1AF4A6F5E406F97043C5D /* libPods-Fake PayPal WalletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694B5905BDBA43D3BAFE15C3 /* libPods-Fake PayPal WalletTests.a */; };
+		FAD44E75C6754E289D88D2EE /* libPods-fake-walletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CB66DF9D914967B5666327 /* libPods-fake-walletTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,21 +39,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16FA9C06199413CA0000A7F8 /* Fake PayPal Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fake PayPal Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16FA9C06199413CA0000A7F8 /* fake-wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fake-wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FA9C09199413CA0000A7F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16FA9C0B199413CA0000A7F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		16FA9C0D199413CA0000A7F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		16FA9C11199413CA0000A7F8 /* Fake PayPal Wallet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fake PayPal Wallet-Info.plist"; sourceTree = "<group>"; };
+		16FA9C11199413CA0000A7F8 /* fake-wallet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fake-wallet-Info.plist"; sourceTree = "<group>"; };
 		16FA9C13199413CA0000A7F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16FA9C15199413CA0000A7F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		16FA9C17199413CA0000A7F8 /* Fake PayPal Wallet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fake PayPal Wallet-Prefix.pch"; sourceTree = "<group>"; };
+		16FA9C17199413CA0000A7F8 /* fake-wallet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fake-wallet-Prefix.pch"; sourceTree = "<group>"; };
 		16FA9C18199413CA0000A7F8 /* WLTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLTAppDelegate.h; sourceTree = "<group>"; };
 		16FA9C19199413CA0000A7F8 /* WLTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLTAppDelegate.m; sourceTree = "<group>"; };
 		16FA9C1C199413CA0000A7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16FA9C24199413CA0000A7F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		16FA9C2A199413CA0000A7F8 /* Fake PayPal WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fake PayPal WalletTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16FA9C2A199413CA0000A7F8 /* fake-walletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fake-walletTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FA9C2B199413CA0000A7F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		16FA9C33199413CA0000A7F8 /* Fake PayPal WalletTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fake PayPal WalletTests-Info.plist"; sourceTree = "<group>"; };
+		16FA9C33199413CA0000A7F8 /* fake-walletTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fake-walletTests-Info.plist"; sourceTree = "<group>"; };
 		16FA9C35199413CA0000A7F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16FA9C4A199414640000A7F8 /* WLTDoNothingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLTDoNothingViewController.m; sourceTree = "<group>"; };
 		16FA9C4B199414640000A7F8 /* WLTDoNothingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLTDoNothingViewController.h; sourceTree = "<group>"; };
@@ -64,7 +65,10 @@
 		16FA9C54199414680000A7F8 /* WLTAppSwitchAuthRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLTAppSwitchAuthRequestManager.m; sourceTree = "<group>"; };
 		51C5F970D4964E29B4415FD3 /* libPods-Fake PayPal Wallet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fake PayPal Wallet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		694B5905BDBA43D3BAFE15C3 /* libPods-Fake PayPal WalletTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fake PayPal WalletTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BFE0A14E24846F2810B68C8 /* Pods-Fake PayPal Wallet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake PayPal Wallet.xcconfig"; path = "Pods/Pods-Fake PayPal Wallet.xcconfig"; sourceTree = "<group>"; };
+		9918529E26EC4246B00DA813 /* libPods-fake-wallet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fake-wallet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE40D5842ACF4191BA5DC2FE /* Pods-fake-wallet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fake-wallet.xcconfig"; path = "Pods/Pods-fake-wallet.xcconfig"; sourceTree = "<group>"; };
+		D0CB66DF9D914967B5666327 /* libPods-fake-walletTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fake-walletTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E619EA0A1DA348F7849DA1DA /* Pods-fake-walletTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fake-walletTests.xcconfig"; path = "Pods/Pods-fake-walletTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +79,7 @@
 				16FA9C0C199413CA0000A7F8 /* CoreGraphics.framework in Frameworks */,
 				16FA9C0E199413CA0000A7F8 /* UIKit.framework in Frameworks */,
 				16FA9C0A199413CA0000A7F8 /* Foundation.framework in Frameworks */,
-				00A373B49B474639BC4F8575 /* libPods-Fake PayPal Wallet.a in Frameworks */,
+				297D2725745E40BEB7556A7C /* libPods-fake-wallet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +91,7 @@
 				16FA9C2E199413CA0000A7F8 /* UIKit.framework in Frameworks */,
 				16FA9C2D199413CA0000A7F8 /* Foundation.framework in Frameworks */,
 				BAC1AF4A6F5E406F97043C5D /* libPods-Fake PayPal WalletTests.a in Frameworks */,
+				FAD44E75C6754E289D88D2EE /* libPods-fake-walletTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,19 +101,20 @@
 		16FA9BFD199413CA0000A7F8 = {
 			isa = PBXGroup;
 			children = (
-				16FA9C0F199413CA0000A7F8 /* Fake PayPal Wallet */,
-				16FA9C31199413CA0000A7F8 /* Fake PayPal WalletTests */,
+				16FA9C0F199413CA0000A7F8 /* Fake Wallet */,
+				16FA9C31199413CA0000A7F8 /* Fake Wallet Tests */,
 				16FA9C08199413CA0000A7F8 /* Frameworks */,
 				16FA9C07199413CA0000A7F8 /* Products */,
-				8BFE0A14E24846F2810B68C8 /* Pods-Fake PayPal Wallet.xcconfig */,
+				AE40D5842ACF4191BA5DC2FE /* Pods-fake-wallet.xcconfig */,
+				E619EA0A1DA348F7849DA1DA /* Pods-fake-walletTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		16FA9C07199413CA0000A7F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16FA9C06199413CA0000A7F8 /* Fake PayPal Wallet.app */,
-				16FA9C2A199413CA0000A7F8 /* Fake PayPal WalletTests.xctest */,
+				16FA9C06199413CA0000A7F8 /* fake-wallet.app */,
+				16FA9C2A199413CA0000A7F8 /* fake-walletTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,11 +128,13 @@
 				16FA9C2B199413CA0000A7F8 /* XCTest.framework */,
 				51C5F970D4964E29B4415FD3 /* libPods-Fake PayPal Wallet.a */,
 				694B5905BDBA43D3BAFE15C3 /* libPods-Fake PayPal WalletTests.a */,
+				9918529E26EC4246B00DA813 /* libPods-fake-wallet.a */,
+				D0CB66DF9D914967B5666327 /* libPods-fake-walletTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		16FA9C0F199413CA0000A7F8 /* Fake PayPal Wallet */ = {
+		16FA9C0F199413CA0000A7F8 /* Fake Wallet */ = {
 			isa = PBXGroup;
 			children = (
 				16FA9C4D199414680000A7F8 /* Manual Auth */,
@@ -139,32 +147,34 @@
 				16FA9C24199413CA0000A7F8 /* Images.xcassets */,
 				16FA9C10199413CA0000A7F8 /* Supporting Files */,
 			);
-			path = "Fake PayPal Wallet";
+			name = "Fake Wallet";
+			path = "fake-wallet";
 			sourceTree = "<group>";
 		};
 		16FA9C10199413CA0000A7F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				16FA9C11199413CA0000A7F8 /* Fake PayPal Wallet-Info.plist */,
+				16FA9C11199413CA0000A7F8 /* fake-wallet-Info.plist */,
 				16FA9C12199413CA0000A7F8 /* InfoPlist.strings */,
 				16FA9C15199413CA0000A7F8 /* main.m */,
-				16FA9C17199413CA0000A7F8 /* Fake PayPal Wallet-Prefix.pch */,
+				16FA9C17199413CA0000A7F8 /* fake-wallet-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		16FA9C31199413CA0000A7F8 /* Fake PayPal WalletTests */ = {
+		16FA9C31199413CA0000A7F8 /* Fake Wallet Tests */ = {
 			isa = PBXGroup;
 			children = (
 				16FA9C32199413CA0000A7F8 /* Supporting Files */,
 			);
-			path = "Fake PayPal WalletTests";
+			name = "Fake Wallet Tests";
+			path = "fake-walletTests";
 			sourceTree = "<group>";
 		};
 		16FA9C32199413CA0000A7F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				16FA9C33199413CA0000A7F8 /* Fake PayPal WalletTests-Info.plist */,
+				16FA9C33199413CA0000A7F8 /* fake-walletTests-Info.plist */,
 				16FA9C34199413CA0000A7F8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -193,28 +203,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		16FA9C05199413CA0000A7F8 /* Fake PayPal Wallet */ = {
+		16FA9C05199413CA0000A7F8 /* fake-wallet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16FA9C3B199413CA0000A7F8 /* Build configuration list for PBXNativeTarget "Fake PayPal Wallet" */;
+			buildConfigurationList = 16FA9C3B199413CA0000A7F8 /* Build configuration list for PBXNativeTarget "fake-wallet" */;
 			buildPhases = (
-				895526C4414A40CD8A0893C7 /* Check Pods Manifest.lock */,
+				D5EA0C1DBCC84BE6B09F806E /* Check Pods Manifest.lock */,
 				16FA9C02199413CA0000A7F8 /* Sources */,
 				16FA9C03199413CA0000A7F8 /* Frameworks */,
 				16FA9C04199413CA0000A7F8 /* Resources */,
-				87436181D64D45CEA05B4597 /* Copy Pods Resources */,
+				C14868856CBA49BE8A310A10 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Fake PayPal Wallet";
+			name = "fake-wallet";
 			productName = "Fake PayPal Wallet";
-			productReference = 16FA9C06199413CA0000A7F8 /* Fake PayPal Wallet.app */;
+			productReference = 16FA9C06199413CA0000A7F8 /* fake-wallet.app */;
 			productType = "com.apple.product-type.application";
 		};
-		16FA9C29199413CA0000A7F8 /* Fake PayPal WalletTests */ = {
+		16FA9C29199413CA0000A7F8 /* fake-walletTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16FA9C3E199413CA0000A7F8 /* Build configuration list for PBXNativeTarget "Fake PayPal WalletTests" */;
+			buildConfigurationList = 16FA9C3E199413CA0000A7F8 /* Build configuration list for PBXNativeTarget "fake-walletTests" */;
 			buildPhases = (
 				61B2712A5D224CA8B3D0F724 /* Check Pods Manifest.lock */,
 				16FA9C26199413CA0000A7F8 /* Sources */,
@@ -227,9 +237,9 @@
 			dependencies = (
 				16FA9C30199413CA0000A7F8 /* PBXTargetDependency */,
 			);
-			name = "Fake PayPal WalletTests";
+			name = "fake-walletTests";
 			productName = "Fake PayPal WalletTests";
-			productReference = 16FA9C2A199413CA0000A7F8 /* Fake PayPal WalletTests.xctest */;
+			productReference = 16FA9C2A199413CA0000A7F8 /* fake-walletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 16FA9C01199413CA0000A7F8 /* Build configuration list for PBXProject "Fake PayPal Wallet" */;
+			buildConfigurationList = 16FA9C01199413CA0000A7F8 /* Build configuration list for PBXProject "fake-wallet" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -263,8 +273,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				16FA9C05199413CA0000A7F8 /* Fake PayPal Wallet */,
-				16FA9C29199413CA0000A7F8 /* Fake PayPal WalletTests */,
+				16FA9C05199413CA0000A7F8 /* fake-wallet */,
+				16FA9C29199413CA0000A7F8 /* fake-walletTests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +313,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-Fake PayPal WalletTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-fake-walletTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		61B2712A5D224CA8B3D0F724 /* Check Pods Manifest.lock */ = {
@@ -321,7 +331,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		87436181D64D45CEA05B4597 /* Copy Pods Resources */ = {
+		C14868856CBA49BE8A310A10 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,10 +343,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Fake PayPal Wallet-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-fake-wallet-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		895526C4414A40CD8A0893C7 /* Check Pods Manifest.lock */ = {
+		D5EA0C1DBCC84BE6B09F806E /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,7 +389,7 @@
 /* Begin PBXTargetDependency section */
 		16FA9C30199413CA0000A7F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 16FA9C05199413CA0000A7F8 /* Fake PayPal Wallet */;
+			target = 16FA9C05199413CA0000A7F8 /* fake-wallet */;
 			targetProxy = 16FA9C2F199413CA0000A7F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -433,6 +443,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/fake-wallet-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -470,6 +481,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/fake-wallet-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -484,16 +496,15 @@
 		};
 		16FA9C3C199413CA0000A7F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BFE0A14E24846F2810B68C8 /* Pods-Fake PayPal Wallet.xcconfig */;
+			baseConfigurationReference = AE40D5842ACF4191BA5DC2FE /* Pods-fake-wallet.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Fake PayPal Wallet/Fake PayPal Wallet-Prefix.pch";
-				INFOPLIST_FILE = "Fake PayPal Wallet/Fake PayPal Wallet-Info.plist";
-				PRODUCT_NAME = "Fake PayPal Wallet";
+				INFOPLIST_FILE = "$(SRCROOT)/fake-wallet/fake-wallet-Info.plist";
+				PRODUCT_NAME = "fake-wallet";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -501,16 +512,15 @@
 		};
 		16FA9C3D199413CA0000A7F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BFE0A14E24846F2810B68C8 /* Pods-Fake PayPal Wallet.xcconfig */;
+			baseConfigurationReference = AE40D5842ACF4191BA5DC2FE /* Pods-fake-wallet.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Fake PayPal Wallet/Fake PayPal Wallet-Prefix.pch";
-				INFOPLIST_FILE = "Fake PayPal Wallet/Fake PayPal Wallet-Info.plist";
-				PRODUCT_NAME = "Fake PayPal Wallet";
+				INFOPLIST_FILE = "$(SRCROOT)/fake-wallet/fake-wallet-Info.plist";
+				PRODUCT_NAME = "fake-wallet";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -518,6 +528,7 @@
 		};
 		16FA9C3F199413CA0000A7F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E619EA0A1DA348F7849DA1DA /* Pods-fake-walletTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fake PayPal Wallet.app/Fake PayPal Wallet";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -531,8 +542,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Fake PayPal WalletTests/Fake PayPal WalletTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Fake PayPal WalletTests/fake-walletTests-Info.plist";
+				PRODUCT_NAME = "fake-walletTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -540,6 +551,7 @@
 		};
 		16FA9C40199413CA0000A7F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E619EA0A1DA348F7849DA1DA /* Pods-fake-walletTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fake PayPal Wallet.app/Fake PayPal Wallet";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -549,8 +561,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fake PayPal Wallet/Fake PayPal Wallet-Prefix.pch";
-				INFOPLIST_FILE = "Fake PayPal WalletTests/Fake PayPal WalletTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Fake PayPal WalletTests/fake-walletTests-Info.plist";
+				PRODUCT_NAME = "fake-walletTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -559,7 +571,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16FA9C01199413CA0000A7F8 /* Build configuration list for PBXProject "Fake PayPal Wallet" */ = {
+		16FA9C01199413CA0000A7F8 /* Build configuration list for PBXProject "fake-wallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				16FA9C39199413CA0000A7F8 /* Debug */,
@@ -568,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16FA9C3B199413CA0000A7F8 /* Build configuration list for PBXNativeTarget "Fake PayPal Wallet" */ = {
+		16FA9C3B199413CA0000A7F8 /* Build configuration list for PBXNativeTarget "fake-wallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				16FA9C3C199413CA0000A7F8 /* Debug */,
@@ -577,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16FA9C3E199413CA0000A7F8 /* Build configuration list for PBXNativeTarget "Fake PayPal WalletTests" */ = {
+		16FA9C3E199413CA0000A7F8 /* Build configuration list for PBXNativeTarget "fake-walletTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				16FA9C3F199413CA0000A7F8 /* Debug */,

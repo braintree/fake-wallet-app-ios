@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "16FA9C05199413CA0000A7F8"
-               BuildableName = "Fake PayPal Wallet.app"
-               BlueprintName = "Fake PayPal Wallet"
-               ReferencedContainer = "container:Fake PayPal Wallet.xcodeproj">
+               BuildableName = "fake-wallet.app"
+               BlueprintName = "fake-wallet"
+               ReferencedContainer = "container:fake-wallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16FA9C29199413CA0000A7F8"
-               BuildableName = "Fake PayPal WalletTests.xctest"
-               BlueprintName = "Fake PayPal WalletTests"
-               ReferencedContainer = "container:Fake PayPal Wallet.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "16FA9C05199413CA0000A7F8"
-            BuildableName = "Fake PayPal Wallet.app"
-            BlueprintName = "Fake PayPal Wallet"
-            ReferencedContainer = "container:Fake PayPal Wallet.xcodeproj">
+            BuildableName = "fake-wallet.app"
+            BlueprintName = "fake-wallet"
+            ReferencedContainer = "container:fake-wallet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "16FA9C05199413CA0000A7F8"
-            BuildableName = "Fake PayPal Wallet.app"
-            BlueprintName = "Fake PayPal Wallet"
-            ReferencedContainer = "container:Fake PayPal Wallet.xcodeproj">
+            BuildableName = "fake-wallet.app"
+            BlueprintName = "fake-wallet"
+            ReferencedContainer = "container:fake-wallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "16FA9C05199413CA0000A7F8"
-            BuildableName = "Fake PayPal Wallet.app"
-            BlueprintName = "Fake PayPal Wallet"
-            ReferencedContainer = "container:Fake PayPal Wallet.xcodeproj">
+            BuildableName = "fake-wallet.app"
+            BlueprintName = "fake-wallet"
+            ReferencedContainer = "container:fake-wallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
