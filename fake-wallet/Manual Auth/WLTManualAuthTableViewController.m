@@ -54,7 +54,7 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
         case WLTAppSwitchWalletProviderVenmo: {
             self.statusLabel.text = @"Venmo Touch";
             self.originatingAppLabel.text = [NSString stringWithFormat:@"%@ (%@)", authRequest.sourceApplicationName, authRequest.sourceApplication];
-            self.successURLLabel.text = [[authRequest successURLWithPayload:@{ @"paymentMethodNonce": @"venmo-nonce" }] absoluteString] ?: @"(nil)";
+            self.successURLLabel.text = [[authRequest successURLWithPayload:@{ @"paymentMethodNonce": @"fake-valid-nonce" }] absoluteString] ?: @"(nil)";
             self.errorURLLabel.text = [[authRequest errorURLWithCode:-1 message:@"Triggered manual error"] absoluteString] ?: @"(nil)";
             self.cancelURLLabel.text = [[authRequest cancelURL] absoluteString] ?: @"(nil)";
             break;
@@ -88,7 +88,7 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
                 
                 switch (self.authRequest.walletProvider) {
                     case WLTAppSwitchWalletProviderVenmo: {
-                        returnSwitchURL = [self.authRequest successURLWithPayload:@{ @"paymentMethodNonce": @"venmo-nonce" }];
+                        returnSwitchURL = [self.authRequest successURLWithPayload:@{ @"paymentMethodNonce": @"fake-valid-nonce" }];
                         break;
                     }
                     case WLTAppSwitchWalletProviderPayPal: {
