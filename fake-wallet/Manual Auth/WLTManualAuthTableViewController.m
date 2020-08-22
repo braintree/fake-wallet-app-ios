@@ -86,6 +86,8 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
             case WTLManualAuthTableViewControllerActionSucceedRowIndex: {
                 NSLog(@"WLT Will Succeed");
                 
+                returnSwitchURL = [self.authRequest successURLWithPayload:@{ @"paymentMethodNonce": @"fake-venmo-account-nonce", @"username": @"FakeVenmoAccount" }];
+                
                 switch (self.authRequest.walletProvider) {
                     case WLTAppSwitchWalletProviderVenmo: {
                         returnSwitchURL = [self.authRequest successURLWithPayload:@{ @"paymentMethodNonce": @"fake-valid-nonce" }];
@@ -132,17 +134,6 @@ const NSInteger WTLManualAuthTableViewControllerActionCancelRowIndex = 2;
         }
 
         NSLog(@"Attempting app switch to: %@", returnSwitchURL);
-
-        BOOL appSwitchPossible = [[UIApplication sharedApplication] canOpenURL:returnSwitchURL];
-        if (!appSwitchPossible) {
-            [[[UIAlertView alloc] initWithTitle:@"App Switch Troubles"
-                                        message:[NSString stringWithFormat:@"canOpenURL:%@ failed", returnSwitchURL]
-                                       delegate:nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil] show];
-
-            return;
-        }
 
         BOOL appSwitchSuccess = [[UIApplication sharedApplication] openURL:returnSwitchURL];
         if (!appSwitchSuccess) {

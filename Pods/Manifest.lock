@@ -1,22 +1,32 @@
 PODS:
   - Expecta (0.3.1)
-  - NSURL+QueryDictionary (1.0.3)
+  - "NSURL+QueryDictionary (1.0.3)"
   - OCHamcrest (3.0.1)
   - OCMock (2.2.4)
   - Specta (0.2.1)
 
 DEPENDENCIES:
   - Expecta (~> 0.3.0)
-  - NSURL+QueryDictionary (~> 1.0)
+  - "NSURL+QueryDictionary (~> 1.0)"
   - OCHamcrest (~> 3.0.1)
   - OCMock (~> 2.2.3)
   - Specta (~> 0.2.1)
 
-SPEC CHECKSUMS:
-  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
-  NSURL+QueryDictionary: 1ad81be60c10e3f4d80c5c4beb7125de96aaec5e
-  OCHamcrest: 207233b7d7a44dadd66aca398947cc7e029c9be5
-  OCMock: 6db79185520e24f9f299548f2b8b07e41d881bd5
-  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
+SPEC REPOS:
+  trunk:
+    - Expecta
+    - "NSURL+QueryDictionary"
+    - OCHamcrest
+    - OCMock
+    - Specta
 
-COCOAPODS: 0.33.1
+SPEC CHECKSUMS:
+  Expecta: a354d4633409dd9fe8c4f5ff5130426adbe31628
+  "NSURL+QueryDictionary": 06f93589c2948128321ea562592ed6bf1c84d070
+  OCHamcrest: e19857683e4eefab64b878668eac04c2f4567118
+  OCMock: a6a7dc0e3997fb9f35d99f72528698ebf60d64f2
+  Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
+
+PODFILE CHECKSUM: 004c5ed19dd87f2a26abc57aadc41bad3fd11245
+
+COCOAPODS: 1.8.4
